@@ -79,3 +79,7 @@ void quickSort(int arr[], int low, int high){
         quickSort(arr, a + 2, high);
     }
 }
+
+int main() {
+    return 0;
+}
