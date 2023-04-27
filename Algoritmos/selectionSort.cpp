@@ -9,7 +9,7 @@ void selectionSort(int arr[], int n){
     for (int a = 0; a < n - 1; a++){
         indice_Del_Menor = a;
         
-        for (int b = a+1; b < n; b++){
+        for (int b = a + 1; b < n; b++){
             if (arr[b] < arr[indice_Del_Menor]) {
                 indice_Del_Menor = b;
             }
