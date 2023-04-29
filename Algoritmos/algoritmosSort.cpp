@@ -5,7 +5,13 @@
     inserción y rápido.
 */
 
+#define arr_size 10
+#define max_num 100
+
 #include "headerSort.hpp"
+
+#include <iostream>
+#include <time.h>
 
 using namespace std;
 
@@ -87,6 +93,89 @@ void quickSort(int arr[], int low, int high){
     }
 }
 
-int main() {
+int main(){
+    int arr[arr_size];
+
+    srand(time(NULL));
+
+    cout << "Array a ordernar:" << endl;
+
+    for (int a = 0; a < arr_size; a++){
+        arr[a] = rand() % max_num;
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+
+    cout << "Ordenado por bubbleSort:" << endl;
+
+    bubbleSort(arr, arr_size);
+
+    for (int a = 0; a < arr_size; a++){
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+    cout << endl;
+
+    cout << "Array a ordernar:" << endl;
+
+    for (int a = 0; a < arr_size; a++){
+        arr[a] = rand() % max_num;
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+
+    cout << "Ordenado por selectionSort:" << endl;
+
+    selectionSort(arr, arr_size);
+
+    for (int a = 0; a < arr_size; a++){
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+    cout << endl;
+
+    cout << "Array a ordernar:" << endl;
+
+    for (int a = 0; a < arr_size; a++){
+        arr[a] = rand() % max_num;
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+
+    cout << "Ordenado por insertionSort:" << endl;
+
+    insertionSort(arr, arr_size);
+
+    for (int a = 0; a < arr_size; a++){
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+    cout << endl;
+
+    cout << "Array a ordernar:" << endl;    
+
+    for (int a = 0; a < arr_size; a++){
+        arr[a] = rand() % max_num;
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+
+    cout << "Ordenado por quickSort:" << endl;
+
+    quickSort(arr, 0, arr_size - 1);
+
+    for (int a = 0; a < arr_size; a++){
+        cout << arr[a] << " ";
+    }
+
+    cout << endl;
+
     return 0;
 }
