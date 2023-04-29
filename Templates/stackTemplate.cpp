@@ -171,5 +171,29 @@ int main() {
     std::cerr << "Exception: " << e.what() << std::endl;
   }
 
+  Stack<char> char_stack;
+
+  char_stack.push('a');
+  char_stack.push('b');
+  char_stack.push('c');
+  char_stack.push('d');
+
+  std::cout << std::endl;
+
+  std::cout << "char_stack es:" << std::endl;
+
+  char_stack.foreach([](char caracter) {
+    std::cout << caracter << " ";
+  });
+
+  std::cout << std::endl;
+
+  /*
+  while(true){
+    char borrado = char_stack.pop();
+    std::cout << "Elemento borrado: " << borrado << std::endl;
+  }
+  */
+
   return 0;
 }
