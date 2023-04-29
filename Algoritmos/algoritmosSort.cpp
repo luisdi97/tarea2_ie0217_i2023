@@ -1,3 +1,10 @@
+/*! \file algoritmosSort.cpp
+    \brief Implementación de los algoritmos de ordenamiento.
+    
+    Implementación de los algoritmos de ordenamiento de burbuja, selección,
+    inserción y rápido.
+*/
+
 #include "headerSort.hpp"
 
 using namespace std;
