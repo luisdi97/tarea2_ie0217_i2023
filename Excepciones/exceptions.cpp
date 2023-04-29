@@ -24,13 +24,7 @@ OTROS ACUERDOS EN EL SOFTWARE.
 */
 
 #include <iostream>
-
-class MyException : public std::exception {
-public:
-  const char* what() const throw() {
-    return "My custom exception";
-  }
-};
+#include "MyException.hpp"
 
 int main() {
 
