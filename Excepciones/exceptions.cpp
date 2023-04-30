@@ -23,7 +23,11 @@ OTRO MODO, QUE SURJA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U
 OTROS ACUERDOS EN EL SOFTWARE.
 */
 
+#define at_vector_index 5
+
 #include <iostream>
+#include <string>
+#include <vector>
 #include "MyException.hpp"
 
 int main() {
@@ -32,6 +36,37 @@ int main() {
     throw MyException();
   } catch (std::exception& e) {
     std::cout << "Error: " << e.what() << std::endl;
+  }
+
+  std::cout << std::endl;
+
+  std::string palabra = "Hola";
+
+  try {
+    int a = std::stoi(palabra);
+  } catch (std::invalid_argument& e) {
+    std::cout << "Argumento invalido para std::" << e.what() << std::endl;
+  }
+
+  std::cout << std::endl;
+
+  try {
+    while (true){
+      palabra = palabra + palabra;
+    }
+  } catch (std::bad_alloc& e) {
+    std::cout << "Error obtenido es: " << e.what() << std::endl;
+  }
+
+  std::cout << std::endl;
+
+  std::vector<int> int_vector;
+
+  try {
+    int_vector.at(at_vector_index);
+  } catch (std::out_of_range& e) {
+    std::cout << "Informacion del error: " << std::endl;
+    std::cout << e.what() << std::endl;
   }
 
   return 0;
