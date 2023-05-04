@@ -6,6 +6,14 @@ Template de una clase Stack.
 
 * Luis Diego Araya Campos. B60478
 
+## Verificar si todos los includes agregados son necesarios para la compilación del código dado
+
+Con respecto a los includes, todos son necesarios menos <stdexcept>, ya que el
+código compila al comentar dicho include. Para los includes necesarios,
+<iostream> se requiere para usar std::cout, <vector> porque se usa la clase
+std::vector y sus métodos, <algorith> para usar std::for_each y <functional>
+para usar std::function.
+
 ## Investigación
 
 std::size t es el tipo de entero sin signo resultado del operador sizeof. std::size t puede almacenar el máximo tamaño teóricamente posible de un objeto de cualquier tipo **[1]**.

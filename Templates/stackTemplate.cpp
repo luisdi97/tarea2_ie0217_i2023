@@ -30,10 +30,11 @@ OTROS ACUERDOS EN EL SOFTWARE.
 #include <functional>
 
 /*
-En efecto todos los includes son necesarios, <iostream> para usar std::cout,
-<vector> porque se usa la clase std::vector y sus métodos, <algorith> para usar
-std::for_each, <stdexcept> para usar std::out_of_range y <functional> para usar
-std::function.
+Con respecto a los includes, todos son necesarios menos <stdexcept>, ya que el
+código compila al comentar dicho include. Para los includes necesarios,
+<iostream> se requiere para usar std::cout, <vector> porque se usa la clase
+std::vector y sus métodos, <algorith> para usar std::for_each y <functional>
+para usar std::function.
 */
 
 /*
