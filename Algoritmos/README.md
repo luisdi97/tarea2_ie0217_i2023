@@ -169,22 +169,15 @@ Entonces, la complejidad es $O(n^2)$.
 ## Instrucciones de uso:
 
 Para compilar, ejecutar y borrar el ejecutable se hace uso del makefile por
-medio del programa **make** o su equivalente. Para compilar el programa utilice
-el comando:
+medio del programa **make** o su equivalente. Para compilar y ejecutar el
+programa utilice el comando:
 
 ```
 make
 ```
 
-Con esto se crea el ejecutable **test.exe**. Luego, para correr el programa
-utilice el comando:
-
-```
-make run
-```
-
-Finalmente, luego de observar el resultado en consola puede eliminar el
-ejecutable con:
+Con esto se crea el ejecutable **test.exe** y se ejecuta. Luego de observar
+el resultado en consola puede eliminar el ejecutable con:
 
 ```
 make clean

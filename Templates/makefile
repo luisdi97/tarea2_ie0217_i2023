@@ -1,5 +1,5 @@
 TARGET = test.exe
-SOURCES = ./stackTemplate.cpp
+SOURCES = stackTemplate.cpp
 CC = g++
 
 ifeq ($(OS),Windows_NT)
@@ -8,12 +8,10 @@ else
 	RM = rm
 endif
 
-.PHONY: all run clean
+.PHONY: clean
 
-all:
+all: $(SOURCES)
 	$(CC) $(SOURCES) -o $(TARGET)
-
-run:
 	./$(TARGET)
 
 clean:
